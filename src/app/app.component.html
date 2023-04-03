@@ -1,4 +1,5 @@
 <h1>Implementation of template drive</h1>
+
 <div class="container-fluid">
   <h3>School of Computer Science admission form</h3>
   <hr>
@@ -6,6 +7,9 @@
   <form #schoolform="ngForm">
     <div>
       {{schoolform.value|json}}
+      <hr>
+      <h3>This is user bound data stored in class</h3>
+      {{userdata|json}}
     </div>
     <hr>
     <div class="form-group">
@@ -57,3 +61,64 @@
     </div>
   </form>
 </div>
+
+
+<!--<div class="container-fluid">
+  <h3>School of Computer Science admission form</h3>
+  <hr>
+  
+  <form #schoolform="ngForm">
+    <div>
+      {{schoolform.value|json}}
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" placeholder="Enter your name" name="studname" ngModel>
+    </div><hr>
+
+    <div>
+      <label>Phone Number:</label>
+      <input type="text" class="form-control" placeholder="Enter your phone number" name="phone" ngModel>
+    </div><hr>
+    <div>
+      <label>Email Id:</label>
+      <input type="text" class="form-control" placeholder="Enter your email id" name="email" ngModel>
+    </div><hr>
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label>City:</label>
+        <input type="text" class="form-control" name="city" ngModel>
+      </div>
+      <div class="form-group">
+        <label>State:</label>
+        <input type="text" class="form-control" name="state" ngModel>
+      </div>
+    </div><hr>
+    <div>
+      <label>Select school name</label>
+      <select name="school" id="school" name="school" ngModel>
+        <option value="select school name">select school name</option>
+        <option value="school of eng">school of eng</option>
+        <option value="school of design">school of design</option>  
+        <option value="school of photography">school of photography</option>
+      </select>
+    </div><hr>
+    <div>
+      <label>Programme Names:</label><br>
+      <input type="radio" id="msc" name="msc" value="M.Sc. CS" >
+      <label for="msc">M.Sc. Cs</label><br>
+      <input type="radio" id="mca" name="mca" value="MCA" >
+      <label for="mca">MCA</label><br>
+    </div><hr>
+    <div>
+      <label>Brochure</label><br>
+      <input type="checkbox" id="brochure" name="brochure" value="I want Brochure" ngModel>
+      <label for="brochure"> I want Brochure</label><br>
+    </div><hr>
+    <div>
+      <input type="submit" value="Submit the details" >
+    </div>
+  </form>
+</div>
+-->
