@@ -8,5 +8,5 @@ import { Formdata } from './formdata';
 })
 export class AppComponent  {
   name = 'Angular';
-  userdata= new Formdata('',98344484200, 'soham@gmail.com','school of eng', 'MCA',true);
+  userdata= new Formdata('soham',98344484200, 'soham@gmail.com','school of eng', 'MCA',true);
 }

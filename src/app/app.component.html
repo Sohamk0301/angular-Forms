@@ -1,29 +1,29 @@
-<h1>Implementation of template drive</h1>
+<h3>Implementation of template drive</h3>
 
 <div class="container-fluid">
-  <h3>School of Computer Science admission form</h3>
+  <h2>School of Computer Science admission form</h2>
   <hr>
   
   <form #schoolform="ngForm">
     <div>
       {{schoolform.value|json}}
       <hr>
-      <h3>This is user bound data stored in class</h3>
+      <h4>This is user bound data stored in class</h4>
       {{userdata|json}}
     </div>
     <hr>
     <div class="form-group">
       <label>Name:</label>
-      <input type="text" class="form-control" placeholder="Enter your name" name="studname" ngModel>
+      <input type="text" class="form-control" placeholder="Enter your name" name="studname" [ngModel]="userdata.name1">
     </div><hr>
     
     <div>
       <label>Phone Number:</label>
-      <input type="text" class="form-control" placeholder="Enter your phone number" name="phone" ngModel>
+      <input type="text" class="form-control" placeholder="Enter your phone number" name="phone" [ngModel]="userdata.phone1">
     </div><hr>
     <div>
       <label>Email Id:</label>
-      <input type="text" class="form-control" placeholder="Enter your email id" name="email" ngModel>
+      <input type="text" class="form-control" placeholder="Enter your email id" name="email" [ngModel]="userdata.email1">
     </div><hr>
     <div ngModelGroup="address">
       <div class="form-group">
@@ -37,7 +37,7 @@
     </div><hr>
     <div>
       <label>Select school name</label>
-      <select name="school" id="school" name="school" ngModel>
+      <select name="school" id="school" name="school" [ngModel]="userdata.schoolname1">
         <option value="select school name">select school name</option>
         <option value="school of eng">school of eng</option>
         <option value="school of design">school of design</option>  
@@ -53,11 +53,11 @@
     </div><hr>
     <div>
       <label>Brochure</label><br>
-      <input type="checkbox" id="brochure" name="brochure" value="I want Brochure" ngModel>
+      <input type="checkbox" id="brochure" name="brochure" value="I want Brochure" [ngModel]="userdata.programme1">
       <label for="brochure"> I want Brochure</label><br>
     </div><hr>
     <div>
-      <input type="submit" value="Submit the details" >
+      <input type="submit" value="Submit the details" [ngModel]="brochure" >
     </div>
   </form>
 </div>
