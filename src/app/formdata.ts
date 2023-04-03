@@ -6,6 +6,5 @@ export class Formdata {
     public schoolname1:string,
     public programmename1:string,
     public brochure:boolean
-  ){}
-  
+  ){}  
 }
